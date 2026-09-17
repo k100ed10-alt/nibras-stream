@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>لوحة المعلم | نبراس ستريم</title>
+  <title>لوحة المعلم | حَصاد التعليمية</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -11,49 +11,27 @@
   <div class="oman-strip"></div>
   <header class="nav app-nav">
     <div class="container-wide nav-inner">
-      <a class="brand" href="index.html"><span class="logo-mark">ن</span> نبراس ستريم</a>
-      <div class="nav-actions">
-        <span style="font-weight:700;" data-user-name>أ. سالم الحارثي</span>
-        <a class="btn btn-gold btn-sm" href="studio.html">دخول الاستوديو</a>
-      </div>
+      <a class="brand" href="index.html"><span class="logo-mark">ح</span> حَصاد التعليمية</a>
+      <a class="btn btn-gold btn-sm" href="studio.html">دخول الاستوديو</a>
     </div>
   </header>
   <div class="app-layout">
     <aside class="sidebar">
       <a class="side-item active" href="teacher.html">لوحة التحكم</a>
-      <a class="side-item" href="studio.html">استوديو البث</a>
-      <a class="side-item" href="assignments.html">معاينة الواجب</a>
-      <a class="side-item" href="parent.html">متابعة أولياء الأمور</a>
+      <a class="side-item" href="studio.html">استوديو حَصاد</a>
     </aside>
     <main class="main">
-      <div class="page-head">
-        <div>
-          <h1>جدولة الأسبوع</h1>
-          <p style="color:#64748b">منهج سلطنة عمان · <span data-grade-name></span> · <span data-cycle></span></p>
+      <h1>جدولة الأسبوع</h1>
+      <div class="panel">
+        <div class="form-grid">
+          <div><label>عنوان الحصة</label><input id="lesson-title" type="text" value="حصة هذا الأسبوع" /></div>
+          <div><label>الصف</label><select id="lesson-grade"></select></div>
+          <div><label>المادة</label><select id="lesson-subject"></select></div>
+          <button class="btn btn-primary" type="button" onclick="scheduleLesson()">حفظ</button>
+          <input id="task-title" type="text" value="واجب الأسبوع" />
+          <button class="btn btn-teal" type="button" onclick="createAssignment()">نشر واجب</button>
         </div>
-        <a class="btn btn-live" href="studio.html">ابدأ البث الآن</a>
-      </div>
-      <div class="grid-2">
-        <div class="panel">
-          <h3>جدولة حصة أسبوعية</h3>
-          <div class="form-grid" style="margin-top:12px">
-            <div><label>عنوان الحصة</label><input id="lesson-title" type="text" value="حصة هذا الأسبوع" /></div>
-            <div><label>الصف</label><select id="lesson-grade"></select></div>
-            <div><label>المادة</label><select id="lesson-subject"></select></div>
-            <div><label>نوع الحصة</label><select id="lesson-type"><option value="live">بث مباشر</option><option value="recorded">تسجيل مسبق</option></select></div>
-            <button class="btn btn-primary" type="button" onclick="scheduleLesson()">حفظ وجدولة</button>
-          </div>
-        </div>
-        <div class="panel">
-          <h3>إنشاء واجب</h3>
-          <div class="form-grid" style="margin-top:12px">
-            <div><label>عنوان الواجب</label><input id="task-title" type="text" value="تدريب على درس الأسبوع" /></div>
-            <button class="btn btn-teal" type="button" onclick="createAssignment()">نشر للطلاب</button>
-            <a class="btn btn-ghost" href="assignments.html">معاينة</a>
-          </div>
-          <h3 style="margin:18px 0 8px">حصص الصف</h3>
-          <div id="lesson-list"></div>
-        </div>
+        <div id="lesson-list"></div>
       </div>
     </main>
   </div>
