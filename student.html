@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة الطالب | نبراس ستريم</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="app-body">
+  <div class="oman-strip"></div>
+  <header class="nav app-nav">
+    <div class="container-wide nav-inner">
+      <a class="brand" href="index.html"><span class="logo-mark">ن</span> نبراس ستريم</a>
+      <div class="nav-actions">
+        <span style="font-weight:700;"><span data-user-name>أحمد الكندي</span> · <span data-grade-name>الصف الثامن</span></span>
+        <a class="btn btn-ghost btn-sm" href="login.html">تبديل الحساب</a>
+      </div>
+    </div>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="side-item active" href="student.html">الرئيسية</a>
+      <a class="side-item" href="watch.html">حصص الأسبوع</a>
+      <a class="side-item" href="assignments.html">واجباتي</a>
+      <a class="side-item" href="index.html#grades">تغيير الصف</a>
+    </aside>
+    <main class="main">
+      <div class="page-head">
+        <div>
+          <h1>مرحباً، <span data-user-name>أحمد</span></h1>
+          <p style="color:#64748b">الأسبوع 4 · <span data-grade-name></span> · <span data-cycle></span></p>
+        </div>
+        <a class="btn btn-live" href="watch.html">الحصة المباشرة الآن</a>
+      </div>
+      <div class="cards">
+        <div class="kpi"><span>حضور الحصص</span><b>92%</b></div>
+        <div class="kpi"><span>واجبات مسلّمة</span><b>7 / 8</b></div>
+        <div class="kpi"><span>معدل الدرجات</span><b>88</b></div>
+        <div class="kpi"><span>نقاط التفاعل</span><b>340</b></div>
+      </div>
+      <div class="panel" style="margin-bottom:16px">
+        <h3 style="margin-bottom:10px">مواد الصف وفق الخطة العمانية</h3>
+        <div class="subject-grid" id="subject-list"></div>
+      </div>
+      <div class="grid-2">
+        <div class="panel"><h3>حصص هذا الأسبوع</h3><div id="lesson-list"></div></div>
+        <div class="panel"><h3>واجبات مستحقة</h3><div id="task-list"></div></div>
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
